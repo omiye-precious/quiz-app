@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate Quiz App</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <div class="container fade-in" id="start-screen">
+    <h1>🎓 Quiz Master</h1>
+    <p>Select a category to begin:</p>
+    <select id="category">
+      <option value="general">General Knowledge</option>
+      <option value="science">Science</option>
+      <option value="tech">Technology</option>
+    </select>
+    <button id="start-btn">Start Quiz</button>
+    <div id="high-score-box">🏆 High Score: <span id="high-score">0</span></div>
+      <a href="#" id="reset-score" style="margin-left: 10px; font-size: 0.9em;">🔁 Reset</a>
+  </div>
+
+  <div class="container hidden fade-in" id="quiz-screen">
+    <div class="quiz-header">
+      <h2 id="question">Question Text</h2>
+    </div>
+    <ul id="answer-buttons" class="btn-list"></ul>
+    <div class="quiz-footer">
+      <p>Time left: <span id="timer">15</span>s</p>
+      <p>Score: <span id="score">0</span></p>
+    </div>
+  </div>
+
+  <div class="container hidden fade-in" id="end-screen">
+    <h2>Quiz Complete! 🎉</h2>
+    <p>Your score: <span id="final-score"></span></p>
+    <div class="btn-group">
+      <button id="restart-btn">Try Again</button>
+      <button id="home-btn">Home</button>
+    </div>
+  </div>
+
+  <audio id="correct-sound" src="/quiz app/success.mp3" preload="auto"></audio>
+  <audio id="wrong-sound" src="/quiz app/error.mp3" preload="auto"></audio>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
